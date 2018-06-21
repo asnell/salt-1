@@ -338,6 +338,12 @@ Nested pillar values can also be set via the command line:
     the key that is passed in will overwrite the entire value of that key,
     rather than merging only the specified value set via the command line.
 
+Lists can be passed via command line pillar data as follows:
+
+.. code-block:: bash
+
+  salt '*' state.sls my_sls_file pillar='{"some_list": ["foo", "bar", "baz"]}'
+
 The example below will swap the value for vim with telnet in the previously
 specified list, notice the nested pillar dict:
 
